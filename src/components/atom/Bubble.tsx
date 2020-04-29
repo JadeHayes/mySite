@@ -6,25 +6,39 @@ const StyledCircle = styled.div`
   margin: 20px;
   display: inline-block;
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
 `;
 
-export type BubbleType = { bgColor: string, diameter: number, zIndex: number, top?: number, left?: number, right?: number, bottom?: number }
-const Bubble = (props: BubbleType) => {
+type Margins = { marginTop?: number | string, marginRight?: number | string, marginBottom?: number | string, marginLeft?: number | string }
+interface BubbleInterface extends Margins {
+  bgColor: string;
+  diameter: number;
+  zIndex: number;
+  top?: number;
+  right?: number;
+  left?: number;
+  bottom?: number;
+  float?: "inherit" | "none" | "initial" | "left" | "right" | "-moz-initial" | "revert" | "unset" | "inline-end" | "inline-start"
+}
+const Bubble = (props: BubbleInterface) => {
   return (
     <>
       <StyledCircle
         style={{
+          float: props.float,
+          top: props.top,
           backgroundColor: props.bgColor,
           width: props.diameter,
           height: props.diameter,
-          position: 'absolute',
-          bottom: props.bottom,
-          top: props.top,
-          left: props.left,
-          right: props.right,
+
+          marginTop: props.marginTop,
+          marginRight: props.marginRight,
+          marginBottom: props.marginBottom,
+          marginLeft: props.marginLeft,
+
+
           zIndex: props.zIndex,
+          position: 'absolute',
+          overflow: 'hidden'
         }}>
       </StyledCircle>
     </>
