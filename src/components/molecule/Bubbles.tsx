@@ -1,48 +1,33 @@
 import React from 'react';
 import Bubble from '../atom/Bubble';
-import styled from 'styled-components';
 
 const darkCircle = '#76B6C3';
-// const lightCircle = '#E6EFF1';
+// const lightCircle = '#E6EFF1';  // TODO: Jade need to find a new color.
 const lightCircle = 'black';
-const containerColor = '#E6EFF1';
 
-const StyledContainer = styled.div`
-  background-color: ${containerColor};
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -5;
-`;
 
 export const TopBubbles = () => {
   return (
-    <StyledContainer>
+    <>
       <Bubble
-        float={'left'}
         top={0}
-        right={0}
-        marginTop={'20%'}
-        marginLeft={'-90%'}
+        left={0}
+        marginTop={220}
+        marginLeft={-60}
         bgColor={lightCircle}
         diameter={175}
-        zIndex={-1}
-      />
-      <Bubble
-        float={'left'}
-        top={0}
-        right={0}
-        marginTop={'-20%'}
-        marginLeft={'-90%'}
-        bgColor={darkCircle}
-        diameter={450}
         zIndex={-2}
       />
-    </StyledContainer>
+      <Bubble
+        top={0}
+        left={0}
+        marginTop={'-6%'}
+        marginLeft={'-5%'}
+        bgColor={darkCircle}
+        diameter={450}
+        zIndex={-3}
+      />
+    </>
   );
 }
 
@@ -51,21 +36,20 @@ export const BottomBubbles = () => {
     <>
       <Bubble
         bgColor={lightCircle}
-        diameter={250}
-        marginTop={'50%'}
-        marginLeft={'60%'}
-        // marginLeft={'60%'}
+        diameter={175}
+        marginTop={1000}
+        marginRight={10}
+        bottom={0}
         right={-100}
         zIndex={-1}
       />
       <Bubble
-        float={'right'}
         bgColor={darkCircle}
         diameter={450}
         bottom={0}
         right={0}
-        marginTop={'6%'}
-        marginLeft={'6%'}
+        marginTop={1050}
+        marginRight={'-5%'}
         zIndex={-2}
       />
     </>

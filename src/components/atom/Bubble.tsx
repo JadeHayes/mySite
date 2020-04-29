@@ -26,18 +26,16 @@ const Bubble = (props: BubbleInterface) => {
         style={{
           float: props.float,
           top: props.top,
+          right: props.right,
+          left: props.left,
           backgroundColor: props.bgColor,
           width: props.diameter,
           height: props.diameter,
-
           marginTop: props.marginTop,
           marginRight: props.marginRight,
-          marginBottom: props.marginBottom,
           marginLeft: props.marginLeft,
-
-
           zIndex: props.zIndex,
-          position: 'absolute',
+          position: 'fixed',
           overflow: 'hidden'
         }}>
       </StyledCircle>
