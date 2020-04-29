@@ -1,10 +1,10 @@
 import React from 'react';
-import Bubble from './components/Bubble';
+import Bubbles from './components/molecule/Bubbles';
 
 const App = () => {
   return (
     <div>
-      <Bubble name='jolene' />
+      <Bubbles />
     </div>
   );
 }
