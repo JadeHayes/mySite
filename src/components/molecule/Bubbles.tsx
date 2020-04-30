@@ -37,7 +37,7 @@ export const BottomBubbles = () => {
       <Bubble
         bgColor={lightCircle}
         diameter={175}
-        marginTop={1000}
+        marginTop={900}
         marginRight={10}
         bottom={0}
         right={-100}
@@ -48,8 +48,8 @@ export const BottomBubbles = () => {
         diameter={450}
         bottom={0}
         right={0}
-        marginTop={1050}
-        marginRight={'-5%'}
+        marginTop={800}
+        marginLeft={-40}
         zIndex={-2}
       />
     </>

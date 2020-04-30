@@ -2,6 +2,7 @@ import React from 'react';
 import { TopBubbles, BottomBubbles } from './components/molecule/Bubbles';
 import styled from 'styled-components';
 import { FontWrapper } from './components/templates/FontWrapper';
+import NavBar from './components/templates/NavBar'
 
 const containerColor = '#E6EFF1';
 
@@ -18,6 +19,7 @@ const StyledContainer = styled.div`
 const App = () => {
   return (
     <StyledContainer>
+      <NavBar />
       <TopBubbles />
       <FontWrapper />
       <BottomBubbles />
