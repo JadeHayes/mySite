@@ -1,10 +1,6 @@
 import React from 'react';
 import Bubble from '../atom/Bubble';
-
-const darkCircle = '#76B6C3';
-// const lightCircle = '#E6EFF1';  // TODO: Jade need to find a new color.
-const lightCircle = 'black';
-
+import { lightCircle, darkCircle } from '../../styles/ThemeHelper';
 
 export const TopBubbles = () => {
   return (

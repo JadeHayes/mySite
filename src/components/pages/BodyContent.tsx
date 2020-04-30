@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import React from "react";
+import JadeHayes from "../atom/Signature";
+import CoverPhoto from "../atom/CoverPhoto";
+import SummaryBlock from "../templates/Summary";
 
 const StyleMainDiv = styled.div`
   background-color: white;
@@ -12,9 +15,12 @@ const StyleMainDiv = styled.div`
   left: 20%;
 `;
 
-export const FontWrapper = () => {
+export const BodyContent = () => {
   return (
     <StyleMainDiv>
+      <CoverPhoto />
+      <JadeHayes />
+      <SummaryBlock />
     </StyleMainDiv>
   );
 }

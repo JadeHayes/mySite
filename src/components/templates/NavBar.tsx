@@ -2,7 +2,7 @@ import { Breadcrumb } from 'antd';
 import { HomeOutlined, InstagramOutlined, LinkedinOutlined, MailOutlined } from '@ant-design/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { mainTeal } from '../styles/ThemeHelper';
+import { mainTeal } from '../../styles/ThemeHelper';
 import CSS from 'csstype';
 
 
