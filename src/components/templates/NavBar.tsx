@@ -12,6 +12,7 @@ const StyledNav = styled(Breadcrumb)`
   height: 40px;
   padding-top: 20px;
   padding-left: 20px;
+  box-shadow: 2px 2px rgb(105, 90, 90, .2);
 `;
 
 const StyledBreadItem = styled(Breadcrumb.Item)`
