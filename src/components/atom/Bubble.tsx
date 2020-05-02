@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledCircle = styled.div`
@@ -20,15 +20,25 @@ interface BubbleInterface extends Margins {
   float?: "inherit" | "none" | "initial" | "left" | "right" | "-moz-initial" | "revert" | "unset" | "inline-end" | "inline-start"
 }
 const Bubble = (props: BubbleInterface) => {
+  const [bubbleColor, toggleBubbleColor] = useState(props.bgColor)
+
+  const randomNum = () => Math.floor(Math.random() * 256)
+  const changeColor = () => {
+    let r = randomNum()
+    let g = randomNum()
+    let b = randomNum()
+    toggleBubbleColor(`rgb(${r}, ${g}, ${b})`)
+  }
   return (
     <>
       <StyledCircle
+        onClick={() => changeColor()}
         style={{
           float: props.float,
           top: props.top,
           right: props.right,
           left: props.left,
-          backgroundColor: props.bgColor,
+          backgroundColor: bubbleColor,
           width: props.diameter,
           height: props.diameter,
           marginTop: props.marginTop,

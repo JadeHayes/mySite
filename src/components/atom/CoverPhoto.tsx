@@ -5,17 +5,27 @@ import { mainTeal } from '../../styles/ThemeHelper';
 
 const StyledImg = styled.img`
   height: auto;
-  width: 24%;
+  width: 20%;
   text-align: center;
   position: relative;
   display: inline-block;
-  margin-top: 40px;
-`;
+  margin-top: 60px;
+
+  @media only screen and (max-width: 768px) {
+    width: 30%;
+    margin-top: 40px;
+  }
+  `;
 
 const StyledSmall = styled.small`
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   color: ${mainTeal}
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 const JadesPhoto = () => {

@@ -26,7 +26,7 @@ const StyledHome = styled(HomeOutlined)`
 `;
 
 const StyledIcon: CSS.Properties = {
-  fontSize: '18px',
+  fontSize: '22px',
   padding: '0 10px 0 10px',
   float: 'right'
 }

@@ -12,18 +12,27 @@ const StyledLogo = styled.img`
   background: rgb(118, 182, 195, .3);
   border-radius: 50%;
   width: 5em;
+
+  @media only screen and (max-width: 768px) {
+    height: 3em;
+    width: 3em;
+  }
+`;
+
+const StyledLogosWrapper = styled.div`
+  margin-top: 40px;
 `;
 
 
 const Technologies = () => {
   return (
-    <>
-      <h4>Made with {`<3`} and...</h4>
+    <StyledLogosWrapper>
+      <h5>Site created with...</h5>
       <StyledLogo src={ts} alt='typescript' />
       <StyledLogo src={react} alt='react' />
       <StyledLogo src={antd} alt='antd' />
       <StyledLogo src={css} alt='css' />
-    </>
+    </StyledLogosWrapper>
   )
 };
 
