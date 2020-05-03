@@ -25,7 +25,7 @@ type TypeLogo = {
 const logos = [
   { src: ts, text: 'typescript', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/components/molecule/Technologies.tsx#L37' },
   { src: react, text: 'react', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/index.tsx#L7' },
-  { src: antd, text: 'antd', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/components/atom/Bubble.tsx#L34' },
+  { src: antd, text: 'antd', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/components/atom/Bubble.tsx#L35' },
   { src: css, text: 'css', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/App.tsx#L10' }
 ];
 
