@@ -1,37 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import css from '../../static/logos/css.png';
 import ts from '../../static/logos/typescript.png';
 import react from '../../static/logos/react.png';
 import antd from '../../static/logos/antd.png';
 import styled from 'styled-components';
-
-const StyledLogo = styled.img`
-  height: 5em;
-  margin: 0 10px 0 10px;
-  background: rgb(118, 182, 195, .3);
-  border-radius: 50%;
-  width: 5em;
-
-  @media only screen and (max-width: 768px) {
-    height: 3em;
-    width: 3em;
-  }
-`;
+import { Row } from 'antd';
+import TechLogo from '../atom/TechLogo';
 
 const StyledLogosWrapper = styled.div`
-  margin-top: 40px;
+  position: static;
 `;
 
+const StyledH4 = styled.h4`
+  margin-top: 60px;
+`;
+
+type TypeLogo = {
+  src: string,
+  text: string,
+  githubLink: string
+}
+
+const logos = [
+  { src: ts, text: 'typescript', githubLink: '#' },
+  { src: react, text: 'react', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/index.tsx#L7' },
+  { src: antd, text: 'antd', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/components/atom/Bubble.tsx#L34' },
+  { src: css, text: 'css', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/App.tsx#L10' }
+];
 
 const Technologies = () => {
   return (
     <StyledLogosWrapper>
-      <h5>Site created with...</h5>
-      <StyledLogo src={ts} alt='typescript' />
-      <StyledLogo src={react} alt='react' />
-      <StyledLogo src={antd} alt='antd' />
-      <StyledLogo src={css} alt='css' />
+      <StyledH4>Site created with...</StyledH4>
+      <Row gutter={[16, 24]}>
+        {logos.map((logo: TypeLogo) => <TechLogo logoSrc={logo.src} text={logo.text} githubLink={logo.githubLink} />)}
+      </Row>
     </StyledLogosWrapper>
   )
 };

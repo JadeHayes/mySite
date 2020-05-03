@@ -20,8 +20,7 @@ const StyledImg = styled.img`
 const StyledSmall = styled.small`
   text-align: center;
   padding-top: 5px;
-  color: ${mainTeal}
-  margin-bottom: 40px;
+  margin: 20px 0 40px 0;
 
   @media only screen and (max-width: 768px) {
     font-size: 10px;

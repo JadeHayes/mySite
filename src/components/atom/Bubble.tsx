@@ -6,6 +6,7 @@ const StyledCircle = styled.div`
   margin: 20px;
   display: inline-block;
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 type Margins = { marginTop?: number | string, marginRight?: number | string, marginBottom?: number | string, marginLeft?: number | string }
