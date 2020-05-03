@@ -54,7 +54,7 @@ const TechLogo = (props: PropsTechLogo) => {
           src={props.logoSrc} alt={props.text} />
       </a>
       <StyledText style={{ opacity: currentOpacity }}>{props.text}</StyledText>
-    </StyledCol>
+    </StyledCol >
   )
 };
 
