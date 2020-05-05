@@ -3,6 +3,7 @@ import { HomeOutlined, InstagramOutlined, LinkedinOutlined, MailOutlined } from 
 import React from 'react';
 import styled from 'styled-components';
 import { mainTeal } from '../../styles/ThemeHelper';
+import ContactIcon from '../atom/ContactIcon';
 import CSS from 'csstype';
 
 
@@ -28,7 +29,8 @@ const StyledHome = styled(HomeOutlined)`
 const StyledIcon: CSS.Properties = {
   fontSize: '22px',
   padding: '0 10px 0 10px',
-  float: 'right'
+  float: 'right',
+  color: 'white'
 }
 
 const NavBar = () => {
@@ -41,9 +43,10 @@ const NavBar = () => {
         <span> Resume </span>
       </StyledBreadItem>
       <StyledBreadItem> Words</StyledBreadItem>
-      <LinkedinOutlined style={StyledIcon} />
-      <InstagramOutlined style={StyledIcon} />
-      <MailOutlined style={StyledIcon} />
+
+      <ContactIcon href='https://www.instagram.com/spacecadethayes/?hl=en' children={<InstagramOutlined style={StyledIcon} />} />
+      <ContactIcon href='mailto: jade.e.hayes@gmail.com' children={<MailOutlined style={StyledIcon} />} />
+      <ContactIcon href='https://www.linkedin.com/in/jade-hayes/' children={<LinkedinOutlined style={StyledIcon} />} />
     </StyledNav>
   )
 }
