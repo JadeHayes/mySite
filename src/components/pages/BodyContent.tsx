@@ -2,9 +2,8 @@ import styled from "styled-components";
 import React from "react";
 import JadeHayes from "../atom/Signature";
 import CoverPhoto from "../atom/CoverPhoto";
-import SummaryBlock from "../templates/Summary";
 import Technologies from "../molecule/Technologies"
-import Resume from "../../static/Resume.png"
+import WorkExperience from "../molecule/WorkExperience";
 
 
 const StyleMainDiv = styled.div`
@@ -24,18 +23,13 @@ const StyleMainDiv = styled.div`
   }
 `;
 
-const StyledResume = styled.img`
-  margin: 0 10px 0 10px;
-  width: 90%;
-  height: auto;
-`;
-
 export const BodyContent = () => {
   return (
     <StyleMainDiv>
       <CoverPhoto />
+      <JadeHayes />
       <Technologies />
-      <StyledResume src={Resume} alt='resume' />
+      <WorkExperience />
     </StyleMainDiv>
   );
 }

@@ -5,12 +5,8 @@ import ts from '../../static/logos/typescript.png';
 import react from '../../static/logos/react.png';
 import antd from '../../static/logos/antd.png';
 import styled from 'styled-components';
-import { Row } from 'antd';
+import { Row, Col } from 'antd';
 import TechLogo from '../atom/TechLogo';
-
-const StyledLogosWrapper = styled.div`
-  position: static;
-`;
 
 const StyledH4 = styled.h4`
   margin-top: 30px;
@@ -29,15 +25,14 @@ const logos = [
   { src: css, text: 'css', githubLink: 'https://github.com/JadeHayes/mySite/blob/master/src/App.tsx#L10' }
 ];
 
-const Technologies = () => {
+const WorkExperience = () => {
   return (
-    <StyledLogosWrapper>
-      <StyledH4>Site created with...</StyledH4>
+    <Col>
       <Row gutter={[16, 24]}>
-        {logos.map((logo: TypeLogo) => <TechLogo logoSrc={logo.src} text={logo.text} githubLink={logo.githubLink} />)}
+        <img src='' />
       </Row>
-    </StyledLogosWrapper>
+    </Col>
   )
 };
 
-export default Technologies;
+export default WorkExperience;
